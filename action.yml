@@ -1,0 +1,25 @@
+name: 'Thirty''s Monolith (Schematic Guardian)'
+description: 'Strictly enforces repository architecture, folder schematics, and coding standards via AI agent.'
+author: 'IAmSoThirsty'
+branding:
+  icon: 'shield'
+  color: 'purple'
+runs:
+  using: "composite"
+  steps:
+    - name: ⚙️ Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install Dependencies
+      run: |
+        pip install pytest pytest-cov pip-audit
+      shell: bash
+
+    - name: 🤖 Run Codex Deus Maximus
+      run: |
+        echo "🚀 Awakening Schematic Guardian..."
+        # We run the python script located in the Action's repository
+        python ${{ github.action_path }}/codex_deus_maximus.py
+      shell: bash
