@@ -1,0 +1,21 @@
+# Development dependencies
+-r requirements.txt
+
+# Testing tools
+pytest-mock>=3.11.1
+pytest-timeout>=2.1.0
+pytest-xdist>=3.3.1
+
+# Code quality and linting
+pylint>=2.17.0
+mypy>=1.5.0
+bandit>=1.7.5
+
+# Documentation
+sphinx>=7.1.0
+sphinx-rtd-theme>=1.3.0
+
+# Development tools
+ipython>=8.14.0
+ipdb>=0.13.13
+pre-commit>=3.3.3

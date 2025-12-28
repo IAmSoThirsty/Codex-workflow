@@ -21,5 +21,6 @@ runs:
       run: |
         echo "🚀 Awakening Schematic Guardian..."
         # We run the python script located in the Action's repository
-        python ${{ github.action_path }}/codex_deus_maximus.py
+        export PYTHONPATH="${{ github.action_path }}/src:$PYTHONPATH"
+        python ${{ github.action_path }}/src/codex/codex_deus_maximus.py
       shell: bash

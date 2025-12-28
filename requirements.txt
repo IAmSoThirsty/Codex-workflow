@@ -1,0 +1,13 @@
+# Core dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pip-audit>=2.6.0
+
+# Logging and utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Code quality
+black>=23.7.0
+flake8>=6.1.0
+isort>=5.12.0

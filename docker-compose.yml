@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  codex-guardian:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codex-guardian
+    volumes:
+      - .:/app
+      - /app/.venv
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python -m codex.codex_deus_maximus
+    restart: unless-stopped
+
+  codex-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codex-dev
+    volumes:
+      - .:/app
+      - /app/.venv
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: bash
+    stdin_open: true
+    tty: true
