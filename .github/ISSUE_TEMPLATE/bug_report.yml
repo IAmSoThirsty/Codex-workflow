@@ -1,0 +1,107 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with Codex Workflow
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees:
+  - IAmSoThirsty
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Thank you for reporting a bug! Please provide as much detail as possible to help us fix it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "When I do X, Y happens instead of Z..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Run command '...'
+        3. See error
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "I expected..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "Instead..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs
+      description: If applicable, add error logs or screenshots.
+      placeholder: "Paste error logs here..."
+      render: shell
+    validations:
+      required: false
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component is affected?
+      options:
+        - Directory Police (src/ enforcement)
+        - Mirror Protocol (test coverage)
+        - History Guard (commit messages)
+        - Code Sanitizer (formatting)
+        - GitHub Action Integration
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Provide details about your environment.
+      placeholder: |
+        - Python version: 3.11
+        - OS: Ubuntu 22.04
+        - GitHub Actions runner: ubuntu-latest
+      value: |
+        - Python version: 
+        - OS: 
+        - GitHub Actions runner: 
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+      placeholder: "Any additional information..."
+    validations:
+      required: false
